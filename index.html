@@ -2,13 +2,21 @@
 <html>
 	<head>
 		<title>ryanatbyte.github.io</title>
+		<link rel="shortcut icon" href="/assets/favicon.svg" type="image/x-icon">
 		<style>
 			@media (prefers-color-scheme: dark) {
 				body {
-					background: #333;
-					color: #ccc;
+					background: #222;
+					color: #bbb;
 					}
 				}
+			}
+			body{
+				max-width: 1440px;
+				margin: 0 auto;
+			}
+			a{
+				color: darkgreen;
 			}
 			.js-hidden{
 				display: none;
@@ -35,7 +43,11 @@
 			</ul>
 		</section>
 		<script>
-			document.querySelector("body.no-js").classList.remove("no-js");
+			document.addEventListener("DOMContentLoaded", (event) => { 
+				let body = document.querySelector("body.no-js");
+				if (body) body.classList.remove("no-js");
+			});
+			
 		</script>
 	</body>
 </html>
