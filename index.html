@@ -2,9 +2,40 @@
 <html>
 	<head>
 		<title>ryanatbyte.github.io</title>
+		<style>
+			@media (prefers-color-scheme: dark) {
+				body {
+					background: #333;
+					color: #ccc;
+					}
+				}
+			}
+			.js-hidden{
+				display: none;
+			}
+			.no-js .js-hidden{
+				display: block;
+			}
+			
+			h1 {
+				
+			}
+		</style>
 	</head>
-	<body>
-		<h1>Ryan</h1>
-		<p>This is a landing page about me and coding with links to relevant public parts of cyberspace</p>
+	<body class="no-js">
+		<h1>Hello world, I am Ryan! </h1>
+		<h2 class="js-hidden">Disclaimer: this page is best experienced with JavaScript enabled!</h2> 
+		<h2>Disclaimer: this page is still WIP!</h2> 
+		<p>I started my career life at <a href="https://bytestudios.com">Bytestudios</a> in 2018 where I learned many things and grew greatly and will always be grateful for my time at such an interesting place!</p>
+		<p>This page serves primarily as a link tree home about me and my public cyberspace coding.</p>
+		<section class="links">
+			
+			<ul>
+				<li><a href="https://bytestudios.com">Bytestudios</a></li>
+			</ul>
+		</section>
+		<script>
+			document.querySelector("body.no-js").classList.remove("no-js");
+		</script>
 	</body>
 </html>
