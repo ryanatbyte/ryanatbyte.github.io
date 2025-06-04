@@ -1,20 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" xmlns:bx="https://boxy-svg.com">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" xmlns:bx="https://boxy-svg.com/app">
+	<!-- crafted with https://boxy-svg.com/app --> 
 	<defs>
 
   </defs>
 	<style>
-		path { fill: black; }
+		
 		@media (prefers-color-scheme: dark) {
-			path { fill: white; }
+			
 		}
 	</style>
 
   <!-- more stuff -->
 
 
-  <ellipse style="stroke: rgb(0, 0, 0);" cx="66" cy="90.2" rx="30" ry="30"></ellipse>
-  <path style="stroke-width: 10px; stroke-linecap: round; stroke-linejoin: round; paint-order: fill; fill: none; stroke: rgb(0, 0, 0);" d="M 22.408 163.884 C 21.848 176.496 45.593 223.697 67.224 224.517 C 99.015 225.201 114.504 216.675 127.417 172.671 C 137.4 216.662 150.117 224.517 178.383 226.274 C 208.941 226.662 229.317 175.7 229.788 166.081"></path>
-  <ellipse style="stroke: rgb(0, 0, 0);" cx="190" cy="89.8" rx="30" ry="30"></ellipse>
-  <rect x="41.41" y="9.744" width="65" height="10" style="stroke: rgb(0, 0, 0); stroke-width: 5px; stroke-linecap: round; stroke-linejoin: round; transform-box: fill-box; transform-origin: 50% 50%;" transform="matrix(0.707107, 0.707107, -0.707107, 0.707107, 18.270821, 32.815301)"></rect>
-  <rect x="41.411" y="9.744" width="65" height="10" style="stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px; transform-origin: 73.911px 14.744px;" transform="matrix(0.707107, -0.707107, 0.707107, 0.707107, 88.648052, 32.815415)"></rect>
+	<ellipse style="stroke: rgb(0, 0, 0);" cx="66" cy="90" rx="30" ry="30"></ellipse>
+	<ellipse style="stroke: rgb(0, 0, 0);" cx="190" cy="90" rx="30" ry="30"></ellipse>
+	<path style="stroke-width: 10px; stroke-linecap: round; stroke-linejoin: round; paint-order: fill; fill: none; stroke: rgb(0, 0, 0);" 
+		d="M 22.408 163.884 C 21.848 176.496 45.593 223.697 67.224 224.517 C 99.015 225.201 114.504 216.675 127.417 172.671 C 137.4 216.662 150.117 224.517 178.383 226.274 C 208.941 226.662 229.317 175.7 229.788 166.081"></path>
+	
+	<rect x="42" y="10" width="65" height="10" 
+		style="stroke: rgb(0, 0, 0); stroke-width: 5px; stroke-linecap: round; stroke-linejoin: round; transform-box: fill-box; transform-origin: 50% 50%;" 
+		transform="matrix(0.707107, 0.707107, -0.707107, 0.707107, 18, 33)">
+	</rect>
+  <rect x="42" y="10" width="65" height="10" 
+	style="stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px; transform-origin: 50% 50%;" 
+	transform="matrix(0.707107, -0.707107, 0.707107, 0.707107, 89, 33)"></rect>
 </svg>
