@@ -20,9 +20,10 @@
 	
 	<rect x="42" y="10" width="65" height="10" 
 		style="stroke: rgb(0, 0, 0); stroke-width: 5px; stroke-linecap: round; stroke-linejoin: round; transform-box: fill-box; transform-origin: 50% 50%;" 
-		transform="matrix(0.707107, 0.707107, -0.707107, 0.707107, 18, 33)">
+		transform="rotate(45deg)">
 	</rect>
-  <rect x="42" y="10" width="65" height="10" 
-	style="stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px; transform-origin: 50% 50%;" 
-	transform="matrix(0.707107, -0.707107, 0.707107, 0.707107, 89, 33)"></rect>
+	<rect x="214" y="10" width="65" height="10" 
+		style="stroke: rgb(0, 0, 0); stroke-width: 5px; stroke-linecap: round; stroke-linejoin: round; transform-box: fill-box; transform-origin: 50% 50%;" 
+		transform="rotate(-45deg)">
+	</rect>
 </svg>
