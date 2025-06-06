@@ -20,10 +20,10 @@
 	
 	<rect x="42" y="10" width="65" height="10" 
 		style="stroke: rgb(0, 0, 0); stroke-width: 5px; stroke-linecap: round; stroke-linejoin: round; transform-box: fill-box; transform-origin: 50% 50%;" 
-		transform="rotate(45deg)">
+		transform="rotateZ(45deg)">
 	</rect>
 	<rect x="214" y="10" width="65" height="10" 
 		style="stroke: rgb(0, 0, 0); stroke-width: 5px; stroke-linecap: round; stroke-linejoin: round; transform-box: fill-box; transform-origin: 50% 50%;" 
-		transform="rotate(-45deg)">
+		transform="rotateZ(-45deg)">
 	</rect>
 </svg>
