@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>ryanatbyte.github.io</title>
-		<link rel="shortcut icon" href="/assets/favicon.svg?v0" type="image/x-icon">
+		<link rel="shortcut icon" href="/assets/favicon.svg?v0" type="image/x-icon" />
 		<style>
 			/* var setup */
 			:root {
@@ -69,7 +69,7 @@
 		<p>Presently, I am investigating and searching for ways to combine my extensive web-related experience with 
 		knowledge and experiences I gained in acquired my Applied Math, Engineering, and Physics degree from UW Madison, and life-experiences in a variety of other disciplines and topics 
 		 to more fully utilize my abilities to further what I believe to be worthy causes and endeavors.</p>
-		<p><strong>If you have questions about me from the perspective of an employer, President Michael of ByteStudios has generously extended his willingness to have a quick chat about why I am awesome and any concerns you may have!  You can setup a time with him at <span class="email-placeholder m">NO JS PLACEHOLDER</span>, or ask me to be the liason at <span class="email-placeholder r">NO JS PLACEHOLDER</span></strong></p>
+		<p><strong>If you have questions about me from the perspective of an employer, President Michael of ByteStudios has generously extended his willingness to have a quick chat about why I am awesome and any concerns you may have!  You can setup a time with him at <span class="email-placeholder m">[NO JS PLACEHOLDER]</span>, or ask me to be the liason at <span class="email-placeholder r">[NO JS PLACEHOLDER]</span></strong></p>
 							
 		<section>
 			<h2>Why I Bother to do Anything</h2>
@@ -198,7 +198,7 @@
 				
 				let emailPlaceholders = document.querySelectorAll(".email-placeholder");
 				for(placeholder of emailPlaceholders){
-					if(placeholder.classList.contains("m"){
+					if(placeholder.classList.contains("m")){
 						//try breaking it up a bit to make it less likely that scrapers and simple bots figure it out
 						let replacer = "michael";
 						replacer += "@";
@@ -206,7 +206,7 @@
 						replace += ".com";
 						placeholder.innerHTML = replacer;
 					}
-					if(placeholder.classList.contains("r"){
+					if(placeholder.classList.contains("r")){
 						//try breaking it up a bit to make it less likely that scrapers and simple bots figure it out
 						let replacer = "rgcc09";
 						replacer += "@";
