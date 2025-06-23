@@ -4,17 +4,21 @@
 		<title>ryanatbyte.github.io</title>
 		<link rel="shortcut icon" href="/assets/favicon.svg?v0" type="image/x-icon">
 		<style>
+			/* var setup */
 			:root {
 				--bg-color: #222;
 				--text-color: #bbb;
 			}
+			
+			
+			/*lightmode via browser */
 			@media (prefers-color-scheme: light) {
 				--bg-color: #bbb;
 				--text-color: #fff;
 			}
+			
+			/*darkmode via browser */
 			@media (prefers-color-scheme: dark) {
-				--bg-color: #222;
-				--text-color: #bbb;
 				body {
 					background: #222;
 					color: #bbb;
@@ -28,6 +32,10 @@
 				max-width: 1440px;
 				padding: 10px 20px;
 				margin: 0 auto;
+				
+				background: #222;
+				color: #bbb;
+				
 			}
 			p, li {
 				font-size: 16px;
