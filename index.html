@@ -4,20 +4,30 @@
 		<title>ryanatbyte.github.io</title>
 		<link rel="shortcut icon" href="/assets/favicon.svg?v0" type="image/x-icon">
 		<style>
+			:root {
+				--bg-color: #222;
+				--text-color: #bbb;
+			}
+			@media (prefers-color-scheme: light) {
+				--bg-color: #bbb;
+				--text-color: #fff;
+			}
 			@media (prefers-color-scheme: dark) {
 				--bg-color: #222;
-				--color: #bbb;
+				--text-color: #bbb;
 				body {
 					background: var(--bg-color, #222);
-					color:  var(--bg-color, #bbb);
+					color:  var(--text-color, #bbb);
 				}
 				
 			}
+			
+			
+			/*main styles */
 			body{
 				max-width: 1440px;
 				padding: 10px 20px;
 				margin: 0 auto;
-				
 			}
 			p, li {
 				font-size: 16px;
