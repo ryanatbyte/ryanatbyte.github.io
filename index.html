@@ -247,8 +247,8 @@
 					
 					//click to add to clipboard
 					placeholder.addEventListener("click", (event)=>{
-						event.target.select()
-						event.target.setSelectionRange(0, 99999); // For mobile devices
+						//event.target.select()
+						//event.target.setSelectionRange(0, 99999); // For mobile devices
 						navigator.clipboard.writeText(event.target.innerHTML);
 
 						//let them know that it  happened
