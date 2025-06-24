@@ -52,6 +52,7 @@
 			}
 			.email-placeholder {
 				font-weight: normal;
+				cursor: pointer;
 			}
 			
 			h1 {
@@ -68,7 +69,7 @@
 		<p>Presently, I am investigating and searching for ways to combine my extensive web-related experience with 
 		knowledge and experiences I gained in acquired my Applied Math, Engineering, and Physics degree from UW Madison, and life-experiences in a variety of other disciplines and topics 
 		 to more fully utilize my abilities to further what I believe to be worthy causes and endeavors.</p>
-		<p><strong>If you have questions about me from the perspective of an employer, President Michael of ByteStudios has generously extended his willingness to have a chat about why I am awesome and any questions or concerns you may have!  You can setup a time with him at <span class="email-placeholder m">[NO JS PLACEHOLDER]</span>, or ask me to be the liason at <span class="email-placeholder r">[NO JS PLACEHOLDER]</span></strong></p>
+		<p><strong>If you have questions about me from the perspective of an employer, President Michael of ByteStudios has generously extended his willingness to have a chat about why I am awesome and any questions or concerns you may have!  You can setup a time with him at <button class="email-placeholder m">[NO JS PLACEHOLDER]</button>, or ask me to be the liason at <button class="email-placeholder r">[NO JS PLACEHOLDER]</button></strong></p>
 							
 		<section>
 			<h2>Why I Bother to do Anything</h2>
@@ -204,6 +205,8 @@
 						replacer += "bytestudios";
 						replacer += ".com";
 						placeholder.innerHTML = replacer;
+						
+						
 					} else if(placeholder.classList.contains("r")){
 						//try breaking it up a bit to make it less likely that scrapers and simple bots figure it out
 						let replacer = "rgcc09";
@@ -213,7 +216,24 @@
 						placeholder.innerHTML = replacer;
 					}
 					
+					//click to add to clipboard
+					placeholder.addEventListener("click", (event)=>{
+						event.target.select()
+						event.target.setSelectionRange(0, 99999); // For mobile devices
+						navigator.clipboard.writeText(event.target.innerHTML);
+
+						//let them know that it  happened
+						let notification = document.createElement("dialog");
+						notification.innerHTML = `<p>email copied to clipboard!</p>`;
+						setTimeout( ()=>{
+							notificaton.close();
+						}, 2500);
+						body.appendChild(notification);
+
+					});
 				}
+				
+				
 				
 			});
 			
