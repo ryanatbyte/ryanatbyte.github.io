@@ -50,14 +50,43 @@
 			.no-js .js-hidden{
 				display: block;
 			}
-			.email-placeholder {
+			button.email-placeholder {
 				font-weight: normal;
 				cursor: pointer;
+				background: inherit;
+				color: inherit;
+				border: none;
+				font-size: inherit;
+				text-decoration: underline;
+				transition: color .25s ease-in-out;
+			}
+			button.email-placeholder:hover{
+				
+				color: white;
 			}
 			
 			h1 {
 				
 			}
+			
+			
+			
+			@keyframes slide-in {
+				from {
+					opacity: 100%;
+				}
+
+				to {
+					transform: 0%;
+				}
+			}
+			.notification{
+				animation: animation: 2s ease-in-out 1s fade-out;
+			}
+			
+			
+			
+			
 		</style>
 	</head>
 	<body class="no-js">
@@ -223,11 +252,13 @@
 						navigator.clipboard.writeText(event.target.innerHTML);
 
 						//let them know that it  happened
+							//technically we could reuse the same dialog instead of making a new each time, but its not something that will be used much so dont bother atm
 						let notification = document.createElement("dialog");
+						notification.classList.add("notification");
 						notification.innerHTML = `<p>email copied to clipboard!</p>`;
-						setTimeout( ()=>{
-							notificaton.close();
-						}, 2500);
+						//setTimeout( ()=>{
+						//	notificaton.close();
+						//}, 2500);
 						body.appendChild(notification);
 
 					});
