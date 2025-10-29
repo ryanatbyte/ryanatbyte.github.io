@@ -351,9 +351,9 @@
 						body.appendChild(notification);
 						*/
 						//decided to just do a quick ::after instead to let them know
-						placeholder.classList.add("recently-copied");
+						event.target.classList.add("recently-copied");
 						setTimeout( ()=>{
-							placeholder.classList.remove("recently-copied");
+							event.target.classList.remove("recently-copied");
 						}, 1500);
 
 					});
