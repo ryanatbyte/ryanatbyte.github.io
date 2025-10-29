@@ -29,7 +29,7 @@
 				padding: 10px 20px;
 				margin: 0 auto;
 				
-				background:  var(--bg-color, #1e1e1e);;
+				background:  var(--bg-color, #1e1e1e);
 				color: var(--text-color, #bbb);
 				font-size: 16px;
 			}
@@ -76,7 +76,7 @@
 				pointer-events: none;
 				content: "Copied to Clipboard!";
 				width: 100%;
-				background: inherit;
+				background:   var(--bg-color, #1e1e1e);
 				border: 1px solid #008300;
 				border-radius: 5px;
 				padding: 3px;
@@ -316,6 +316,7 @@
 				
 				let emailPlaceholders = document.querySelectorAll(".email-placeholder");
 				for(placeholder of emailPlaceholders){
+					//let thisPlaceholder = placeholder; 
 					if(placeholder.classList.contains("m")){
 						//try breaking it up a bit to make it less likely that scrapers and simple bots figure it out
 						let replacer = "michael";
@@ -335,6 +336,7 @@
 					}
 					
 					//click to add to clipboard
+					
 					placeholder.addEventListener("click", (event)=>{
 						//event.target.select()
 						//event.target.setSelectionRange(0, 99999); // For mobile devices
