@@ -6,14 +6,14 @@
 		<style>
 			/* var setup */
 			:root {
-				--bg-color: #222;
+				--bg-color: #1e1e1e;
 				--text-color: #bbb;
 			}
 			
 			/* (wip) lightmode via browser */
 			@media (prefers-color-scheme: light) {
-				--bg-color: #bbb;
-				--text-color: #fff;
+				--bg-color: #aaa;
+				--text-color: #000;
 			}
 			
 			/*darkmode via browser */
@@ -29,8 +29,9 @@
 				padding: 10px 20px;
 				margin: 0 auto;
 				
-				background: #222;
-				color: #bbb;
+				background:  var(--bg-color, #1e1e1e);;
+				color: var(--text-color, #bbb);
+				font-size: 16px;
 			}
 			* {
 			    cursor: url("/assets/nyan-cursor.png"), auto;
@@ -39,7 +40,7 @@
 				cursor: url("/assets/nyan-cursor-active.png"), pointer;
 			}
 			p, li {
-				font-size: 16px;
+				font-size: 1em;
 				font-family: sans-serif;
 				margin: .5em auto;
 			}
@@ -47,7 +48,8 @@
 				font-size: 1.125em;
 			}
 			a{
-				color: darkgreen;
+				/*color: darkgreen;*/
+				color: #008300;
 			}
 			.js-hidden{
 				display: none;
@@ -70,7 +72,14 @@
 			}
 			
 			h1 {
-				
+				font-size: 2em;
+			}
+			h2 {
+				font-size: 1.5em;
+			}
+			h3 {
+				font-size: 1.25em;
+				font-weight: bold;
 			}
 				
 			@keyframes fade-out {
@@ -140,7 +149,7 @@
 		<h2 class="js-hidden">Disclaimer: this page is best experienced with JavaScript enabled(...or will be, right now there isnt really any javascript)!</h2> 
 		<h2>Disclaimer: this portfolio site is still in active development (particularly stylization)!</h2> 
 		<p>This page serves primarily as a quick summary, and a link tree home about me and my public cyberspace coding life.</p>
-		<p>I started my career life at <a href="https://bytestudios.com">Bytestudios</a> in 2018 where I learned many things and grew greatly and will always be grateful for my time at such an interesting place with diverse and exciting projects!</p>
+		<p>I started my career life at <a href="https://bytestudios.com" target="_blank">Bytestudios</a> in 2018 where I learned many things and grew greatly and will always be grateful for my time at such an interesting place with diverse and exciting projects!</p>
 		<p>Presently, I am investigating and searching for ways to combine my extensive web-related experience with 
 		knowledge and experiences I gained in acquired my Applied Math, Engineering, and Physics degree from University of Wisconsin - Madison, and life-experiences in a variety of other disciplines and topics 
 		 to more fully utilize my abilities to further what I believe to be worthy causes and endeavors.</p>
@@ -186,23 +195,23 @@
 				<p>At Byte, I had the opportunity to achieve these objects on a variety of projects.  These are some of the most noteworthy:  
 				
 					<ul>
-						<li><strong><a href="https://collata.site">Collata CMS</a></strong>: involvement in much of the  redesign to modularly upgrade the usability, portability, security, effectiveness, and usefulness for everyone of our proprietary CMS.  
+						<li><strong><a href="https://collata.site" target="_blank">Collata CMS</a></strong>: involvement in much of the  redesign to modularly upgrade the usability, portability, security, effectiveness, and usefulness for everyone of our proprietary CMS.  
 						Additionally, I got to aid with the design and implementation of a system by which we can convert portions of our proprietary codebase to a planned open-source version release of CollataCMS</li>
-						<li><strong><a href="https://collata.site/signup">Collata Signup System</a></strong>: greatly contribute to a mostly-automated beta method people can use to sign up, test, and experience a new Byte site on their own</li>
+						<li><strong><a href="https://collata.site/signup" target="_blank">Collata Signup System</a></strong>: greatly contribute to a mostly-automated beta method people can use to sign up, test, and experience a new Byte site on their own</li>
 		
 						<li><strong>File/Asset Manager</strong>: completely rework the stack for admins storing, uploading, and managing web assets to resolve multiple issues both we and clients identified</li>
-						<li><strong><a href="https://cedarburglibrary.org/spaces/">Spaces System </a></strong>: create the full stack of our very own portable, proprietary beta spaces management system to fullfill varying needs of multiple clients</li>
+						<li><strong><a href="https://cedarburglibrary.org/spaces/" target="_blank">Spaces System </a></strong>: create the full stack of our very own portable, proprietary beta spaces management system to fullfill varying needs of multiple clients</li>
 						
-						<li><strong><a href="https://www.mpl.org/listening-to-mitchell/">Listening to Mitchell </a></strong>:
+						<li><strong><a href="https://www.mpl.org/listening-to-mitchell/" target="_blank">Listening to Mitchell </a></strong>:
 							A fully interactive experience using ThreeJS recreating a fascimile of the original public art project done in 2014 by artists Sonja Thomsen and Adam Carr
 							including audio, pictures, video, animations, a 3D model recreation of the relevant portions of Mitchell St. featuring a reactive and stimulating rendition of the exhibition 
 							and other site visitors' journeys, and an additional story sharing for visitors of the site to view each other and add new ones</li>
 						
-						<li><strong><a href="https://celr.mcw.edu">MCW Community Engagement Learning Repository  </a></strong>: one of my first projects with Byte, I got to craft most aspects of a system designed to upload, manage, view, and publically share connected topical documents by  Medical professional users and admins for the Medical College of Wisconsin. This included condensed information designs, intuitive forms, normalized backend data storage and statistics tracking, and a flexible and powerful search.</li>
+						<li><strong><a href="https://celr.mcw.edu" target="_blank">MCW Community Engagement Learning Repository  </a></strong>: one of my first projects with Byte, I got to craft most aspects of a system designed to upload, manage, view, and publically share connected topical documents by  Medical professional users and admins for the Medical College of Wisconsin. This included condensed information designs, intuitive forms, normalized backend data storage and statistics tracking, and a flexible and powerful search.</li>
 						
-						<li><strong><a href="https://cateringworks.com">CateringWorks </a></strong>: where I got to learn, experiment, and implement with different interactive and reactive interface elements and visual designs </li>
+						<li><strong><a href="https://cateringworks.com" target="_blank">CateringWorks </a></strong>: where I got to learn, experiment, and implement with different interactive and reactive interface elements and visual designs </li>
 						
-						<li><strong>Email Processing System Updates for <a href="https://outpost.coop">Outpost Coop</a></strong>: closely worked with Outpost IT staff to provide surgical updates to depreciating Outlook email APIs, admin interfaces, and form security and auditing</li>
+						<li><strong>Email Processing System Updates for <a href="https://outpost.coop" target="_blank">Outpost Coop</a></strong>: closely worked with Outpost IT staff to provide surgical updates to depreciating Outlook email APIs, admin interfaces, and form security and auditing</li>
 
 					</ul>
 
@@ -225,23 +234,23 @@
 			<section class="quicklinks">
 				<h3>Other Quicklinks to some public facing projects of Byte that have various levels of contribution </h2>
 				<ul>
-					<li><a href="https://bytestudios.com">Bytestudios </a></li>
-					<li><a href="https://collata.site">Collata Signup System</a></li>
-					<li><a href="https://www.mpl.org/listening-to-mitchell/">Listening to Mitchell </a></li>
-					<li><a href="https://cateringworks.com">CateringWorks </a></li>
+					<li><a href="https://bytestudios.com" target="_blank">Bytestudios </a></li>
+					<li><a href="https://collata.site" target="_blank">Collata Signup System</a></li>
+					<li><a href="https://www.mpl.org/listening-to-mitchell/" target="_blank">Listening to Mitchell </a></li>
+					<li><a href="https://cateringworks.com" target="_blank">CateringWorks </a></li>
 			
-					<li><a href="https://cedarburglibrary.org/">Cedarburg Public Library</a></li>
-					<li><a href="https://www.libraryinjonesboro.org"> Craighead County/Jonesboro Public Library </a></li>
-					<li><a href="https://mpl.org">Milwaukee Public Library </a></li>
+					<li><a href="https://cedarburglibrary.org/" target="_blank">Cedarburg Public Library</a></li>
+					<li><a href="https://www.libraryinjonesboro.org" target="_blank"> Craighead County/Jonesboro Public Library </a></li>
+					<li><a href="https://mpl.org" target="_blank">Milwaukee Public Library </a></li>
 
-					<li><a href="https://www.kentcountylibrary.org/">Kent County Public Library</a></li>
+					<li><a href="https://www.kentcountylibrary.org/" target="_blank">Kent County Public Library</a></li>
 				</ul>
 			</section>
 			
 		</section>
 
 		
-		<section class="quicklinks">
+		<section class="interests">
 			<h2>Other Topics, Activities, and broadly "Things" that Interest Me (in no particular order)</h2>
 			<ul>
 				<li>Kitties >:3</li>
@@ -268,6 +277,16 @@
 				<li>Modding and playing videogames</li>
 			</ul>
 		</section>
+		
+		<!-- <section class="demos">
+			<h3>C++  using <a href="https://emscripten.org">emscripten </a> compiled to WebAssembly</h3>
+			<iframe allow="autoplay; fullscreen *;gamepad;xr; cross-origin-isolated; web-share" 
+				allowtransparency="true" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" 
+				frameborder="0" allowfullscreen="true" scrolling="no"  src="/wasmDemos/c++.html">
+			</iframe>
+		</section>
+		-->
+		
 		
 		<script>
 			document.addEventListener("DOMContentLoaded", (event) => { 
