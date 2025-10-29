@@ -59,16 +59,36 @@
 			}
 			button.email-placeholder {
 				font-weight: normal;
-				cursor: pointer;
+				/*cursor: pointer;*/
 				background: inherit;
 				color: inherit;
 				border: none;
 				font-size: inherit;
 				text-decoration: underline;
 				transition: color .25s ease-in-out;
+				position: relative;
 			}
 			button.email-placeholder:hover{
 				color: white;
+			}
+			button.email-placeholder::after {
+				opacity: 0;
+				pointer-events: none;
+				content: "Copied to Clipboard!";
+				width: 100%;
+				background: inherit;
+				border: 1px solid #008300;
+				border-radius: 5px;
+				padding: 3px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 100%;
+				transition: opacity .25s ease-in-out;
+			}
+			button.email-placeholder.recently-copied::after{
+				opacity: 1;
+				transition: opacity .75s ease-in-out;
 			}
 			
 			h1 {
@@ -322,13 +342,19 @@
 
 						//let them know that it  happened
 							//technically we could reuse the same dialog instead of making a new each time, but its not something that will be used much so dont bother atm
-						let notification = document.createElement("dialog");
+						/*let notification = document.createElement("dialog");
 						notification.classList.add("notification");
 						notification.innerHTML = `<p>email copied to clipboard!</p>`;
 						//setTimeout( ()=>{
 						//	notificaton.close();
 						//}, 2500);
 						body.appendChild(notification);
+						*/
+						//decided to just do a quick ::after instead to let them know
+						placeholder.classList.add("recently-copied");
+						setTimeout( ()=>{
+							placeholder.classList.remove("recently-copied");
+						}, 1500);
 
 					});
 				}
