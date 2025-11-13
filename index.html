@@ -47,6 +47,9 @@
 			p strong{
 				font-size: 1.125em;
 			}
+			section  p{
+				padding: 20px;
+			}
 			a{
 				/*color: darkgreen;*/
 				color: #008300;
@@ -100,6 +103,11 @@
 			h3 {
 				font-size: 1.25em;
 				font-weight: bold;
+			}
+			.meme-alt{
+				font-size: .5em;
+				opacity: .85;
+				font-family: sans-serif;
 			}
 				
 			@keyframes fade-out {
@@ -173,10 +181,11 @@
 		<p>Presently, I am investigating and searching for ways to combine my extensive web-related experience with 
 		knowledge and experiences I gained in acquired my Applied Math, Engineering, and Physics degree from University of Wisconsin - Madison, and life-experiences in a variety of other disciplines and topics 
 		 to more fully utilize my abilities to further what I believe to be worthy causes and endeavors.</p>
+		<hr/>
 		<p><strong>If you have questions about me from the perspective of an employer, President Michael of ByteStudios has generously extended his willingness to have a chat about why I am awesome and any questions or concerns you may have!  You can setup a time with him at <button class="email-placeholder m">[NO JS PLACEHOLDER]</button> or ask me to be the liason at <button class="email-placeholder r">[NO JS PLACEHOLDER]</button></strong></p>
 							
 		<section>
-			<h2>Why I Bother to do Anything</h2>
+			<h2>Why I Bother to do Anything <br/><span class="meme-alt">Alternatively: "What is the meaning of life?"</span></h2>
 			<div class="description">
 				<p>One must live their life as themselves, because no one else can do it for them.  
 			Indeed, unless you are unconscious or dead, it appears you must live it, so why not be pleased with how you do it?  
@@ -274,21 +283,22 @@
 			<h2>Other Topics, Activities, and broadly "Things" that Interest Me (in no particular order)</h2>
 			<ul>
 				<li>Kitties >:3</li>
+				<li>learning about interesting things</li>
 				<li>Machine Learning, Machine Intelligence, Automation (primarily beyond just LLMs...), Robotics, and other computing-driven vectors to improving the world</li>
 				<li>Brain-computer interfaces</li>
 				<li>Nano-machines, nano-materials, nano-construction</li>
 				<li>Process and other types of optimization</li>
-				<li>Software, hardware</li>
+				<li>Software, hardware, embedded firmware</li>
 				<li>Energy generation, storage, conservation, efficiency</li>
-				<li>Politics, Ethics, and other society-level abstraction matters</li>
-				<li>Transhumanism</li>
+				<li>Politics, Ethics, and other societal abstraction matters</li>
+				<li>Transhumanism, Metaphysics</li>
 				<li>Quantum Mechanics and Computing</li>
 				<li>Astrophysics and other things related to space</li>
 				<li>History (including Pre-History)</li>
 				<li>Botany, Mycology, microbiology</li>
 				<li>Bees, Honey, Maple Syrup</li>
 				<li>Soup, Pizza</li>
-				<li>(growing and eating) Mint, Raspberries</li>
+				<li>Mint, Raspberries (growing and eating)</li>
 				<li>Biking</li>
 				<li>Pickleball</li>
 				<li>Board and card games</li>
@@ -309,14 +319,20 @@
 		
 		
 		<script>
+			//when the document is ready
 			document.addEventListener("DOMContentLoaded", (event) => { 
+			
 				//remove the no-js class, because we have JS 
 				let body = document.querySelector("body.no-js");
 				if (body) body.classList.remove("no-js");
 				
+				
+				//switch out the email placeholders for their actual content 
 				let emailPlaceholders = document.querySelectorAll(".email-placeholder");
 				for(placeholder of emailPlaceholders){
 					//let thisPlaceholder = placeholder; 
+					
+					//simple class identifies who it is
 					if(placeholder.classList.contains("m")){
 						//try breaking it up a bit to make it less likely that scrapers and simple bots figure it out
 						let replacer = "michael";
@@ -335,16 +351,15 @@
 						placeholder.innerHTML = replacer;
 					}
 					
-					//click to add to clipboard
 					
+					//click to add to clipboard
 					placeholder.addEventListener("click", (event)=>{
-						//event.target.select()
 						//event.target.setSelectionRange(0, 99999); // For mobile devices
-						navigator.clipboard.writeText(event.target.innerHTML);
+						navigator.clipboard.writeText(event.target.innerHTML);//note this is fragile if we add more structure internal to the button
 
-						//let them know that it  happened
+						/*//let them know that it  happened
 							//technically we could reuse the same dialog instead of making a new each time, but its not something that will be used much so dont bother atm
-						/*let notification = document.createElement("dialog");
+						let notification = document.createElement("dialog");
 						notification.classList.add("notification");
 						notification.innerHTML = `<p>email copied to clipboard!</p>`;
 						//setTimeout( ()=>{
@@ -352,6 +367,7 @@
 						//}, 2500);
 						body.appendChild(notification);
 						*/
+						
 						//decided to just do a quick ::after instead to let them know
 						event.target.classList.add("recently-copied");
 						setTimeout( ()=>{
@@ -360,7 +376,6 @@
 
 					});
 				}
-
 			});
 			
 		</script>
