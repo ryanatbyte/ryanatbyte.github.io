@@ -130,7 +130,11 @@
 			
 			.startup-shake {
 				display: inline-block;
-				animation: 1.25s ease-in-out .5s silly-shake;
+				animation: .5s ease-in-out .5s silly-shake;
+			}
+			.startup-shake.fast{
+				animation-duration: .25s;
+				animation-delay: .25s;
 			}
 			
 			
@@ -184,7 +188,7 @@
 		</style>
 	</head>
 	<body class="no-js">
-		<h1>Hello world, I am <span class="startup-shake">Ryan!</span> </h1>
+		<h1>Hello world, I am <span class="startup-shake fast">Ryan!</span> </h1>
 		<h2 class="js-hidden">Disclaimer: this page is best experienced with JavaScript enabled!</h2> 
 		<h3 class="startup-shake">Disclaimer: this portfolio site is still in active development (particularly stylization)!</h3> 
 		<p>This page serves primarily as a quick summary, and a link tree home about me and my public cyberspace coding and professional life.</p>
