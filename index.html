@@ -54,6 +54,7 @@
 				/*color: darkgreen;*/
 				color: #008300;
 				display: inline-block;
+				/*position:relative;*/
 			}
 			a:hover{
 				animation: .5s ease-in-out silly-shake;
@@ -127,8 +128,9 @@
 				animation: 1.5s ease-in-out 1.5s fade-out;
 			}
 			
-			.silly-shake {
-				animation: 1.5s ease-in-out 1.5s silly-shake;
+			.startup-shake {
+				position: inline-block;
+				animation: 1.25s ease-in-out 5s silly-shake;
 			}
 			
 			
@@ -182,9 +184,9 @@
 		</style>
 	</head>
 	<body class="no-js">
-		<h1>Hello world, I am <span class="">Ryan!</span> </h1>
-		<h2 class="js-hidden">Disclaimer: this page is best experienced with JavaScript enabled(...or will be, right now there isnt really any javascript)!</h2> 
-		<h2>Disclaimer: this portfolio site is still in active development (particularly stylization)!</h2> 
+		<h1>Hello world, I am <span class="startup-shake">Ryan!</span> </h1>
+		<h2 class="js-hidden">Disclaimer: this page is best experienced with JavaScript enabled!</h2> 
+		<h3 class="startup-shake">Disclaimer: this portfolio site is still in active development (particularly stylization)!</h3> 
 		<p>This page serves primarily as a quick summary, and a link tree home about me and my public cyberspace coding and professional life.</p>
 		<p>I started my career life at <a href="https://bytestudios.com" target="_blank">Bytestudios</a> in 2018 where I learned many things and grew greatly and will always be grateful for my time at such an interesting place with diverse and exciting projects!</p>
 		<p>Presently, I am investigating and searching for ways to combine my extensive professional web-related experience with knowledge and experiences 
