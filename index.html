@@ -83,7 +83,8 @@
 			button.email-placeholder::after {
 				opacity: 0;
 				pointer-events: none;
-				content: "Copied to Clipboard!";
+				content: "Copied to Clipboard! \A (do not like mailto links)";
+				white-space: pre-wrap;
 				width: 100%;
 				background:   var(--bg-color, #1e1e1e);
 				border: 1px solid #008300;
@@ -98,6 +99,9 @@
 			button.email-placeholder.recently-copied::after{
 				opacity: 1;
 				transition: opacity 1s ease-in-out;
+			}
+			button.email-placeholder .meme-alt{
+			
 			}
 			
 			h1 {
@@ -128,6 +132,12 @@
 			.notification{
 				animation: 1.5s ease-in-out 1.5s fade-out;
 			}
+			
+			
+			.collapsable{
+				
+			}
+			
 			
 			.startup-shake {
 				display: inline-block;
@@ -203,7 +213,7 @@
 		<hr/>
 		<br/>
 		<section>
-			<h3>TL;DR / Summary for the busy (or the lazy!) on recruiting
+			<h3>TL;DR / Summary for the busy (or the lazy!) regarding recruiting
 				<span class="meme-alt"> (what I'm looking for if you're here looking for employees / business partners / contractors)</span>
 			</h3>
 			<p>I'm want to be a valued and useful member of a cooperative team where I can do some combination of:
@@ -281,6 +291,8 @@
 						
 						<li><strong>Email Processing System Updates for <a href="https://outpost.coop" target="_blank">Outpost Coop</a></strong>: closely worked with Outpost IT staff to provide surgical updates to depreciating Outlook email APIs, admin interfaces, and form security and auditing</li>
 
+						<li><strong>Admin and User system rework </strong>: revised the old Admin and old site user systems to be in line with security standards and altered feature-set needs such as more granular permissioning</li>
+
 					</ul>
 
 				</p>
@@ -328,7 +340,7 @@
 				<li>Process and other types of optimization</li>
 				<li>Software, hardware, embedded firmware as tools to accomplish great and cool things</li>
 				<li>Energy generation, storage, distribution, conservation, efficiency</li>
-				<li>feasability, criteria, and routes to closed energy and material cycles</li>
+				<li>Feasability, criteria, and routes to closed energy and material cycles</li>
 				<li>Politics, Ethics, and other societal abstraction matters</li>
 				<li>Transhumanism, Metaphysics, "general" philosophy, multi-layered analysis</li>
 				<li>Quantum Mechanics and Computing</li>
@@ -336,9 +348,10 @@
 				<li>History (including Pre-History)</li>
 				<li>Botany, Mycology, microbiology</li>
 				<li>Bees, Honey, Maple Syrup</li>
+				<li>Pie, Cake, Cookies, and other confectionary goodies</li>
 				<li>Soup, Pizza, Salsa</li>
 				<li>Mint, Raspberries, Garlic (growing and eating)</li>
-				<li>Pickleball, Biking</li>
+				<li>Pickleball, Biking, Hiking</li>
 				<li>Board and card games</li>
 				<li>Reading books, creative writing and ideas</li>
 				<li>Videogame design and storytelling</li>
@@ -363,6 +376,7 @@
 				//remove the no-js class, because we have JS 
 				let body = document.querySelector("body.no-js");
 				if (body) body.classList.remove("no-js");
+				
 				
 				
 				//switch out the email placeholders for their actual content 
@@ -390,6 +404,8 @@
 					}
 					
 					
+				
+					
 					//click to add to clipboard
 					placeholder.addEventListener("click", (event)=>{
 						//event.target.setSelectionRange(0, 99999); // For mobile devices
@@ -399,6 +415,7 @@
 							//technically we could reuse the same dialog instead of making a new each time, but its not something that will be used much so dont bother atm
 						let notification = document.createElement("dialog");
 						notification.classList.add("notification");
+							//setup the tooltip note 
 						notification.innerHTML = `<p>email copied to clipboard!</p>`;
 						//setTimeout( ()=>{
 						//	notificaton.close();
